@@ -8,6 +8,11 @@ export default function UrlTable() {
   const state = useStateContext();
   const dispatch = useDispatch();
 
+  if (state.urlList.length === 0) {
+    return <h2>No URL added</h2>
+  }
+
+
   function incrementCount(id) {
     dispatch({
       type: "incrementingCount",
@@ -58,7 +63,7 @@ export default function UrlTable() {
                   alt="bookmark"
                 />
               </td>
-              <td>
+              <td onClick={() => incrementCount(row.id)}>
                 <a
                   href={row.original}
                   target="_blank"

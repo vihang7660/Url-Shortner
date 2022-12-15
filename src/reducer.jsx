@@ -114,6 +114,5 @@ const initialState = {
     { value: "education", isEditing: false, id: nanoid() },
     { value: "eCommerce", isEditing: false, id: nanoid() },
     { value: "blog", isEditing: false, id: nanoid() },
-    { value: "tttttt", isEditing: false, id: nanoid() },
   ],
 };
