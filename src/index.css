@@ -1,0 +1,70 @@
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid gray;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+}
+
+h1 {
+  text-align: center;
+}
+
+button {
+  font-size: 16px;
+  padding: 10px 20px;
+  margin: 10px;
+  background-color: #1e90ff;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #00bfff;
+}
+
+.delete-btn {
+  background-color: rgb(156, 25, 25);
+}
+.delete-btn:hover {
+  background-color: rgb(233, 17, 17);
+}
+
+.edit-btn {
+  background-color: rgb(27, 26, 26);
+}
+
+.edit-btn:hover {
+  background-color: rgb(49, 45, 45);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+label {
+  margin-bottom: 0.5em;
+}
+
+input {
+  padding: 0.5em;
+  margin-bottom: 0.5em;
+  border: 1px solid #ccc;
+}
+
+.bookmark {
+  cursor: pointer;
+}
