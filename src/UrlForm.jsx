@@ -10,8 +10,17 @@ export default function UrlForm() {
     setInputText(event.target.value);
   }
 
+  function isValidHttpUrl(string) {
+    try {
+      const url = new URL(string);
+      return url.protocol === "http:" || url.protocol === "https:";
+    } catch (err) {
+      return false;
+    }
+  }
+
   function shortenUrl() {
-    if (inputText) {
+    if (isValidHttpUrl(inputText)) {
       dispatch({
         type: "addUrl",
         id: nanoid(),
@@ -19,6 +28,8 @@ export default function UrlForm() {
         original: inputText,
       });
       setInputText("");
+    } else {
+      alert('Please enter valid URL')
     }
   }
 

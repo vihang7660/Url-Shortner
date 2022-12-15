@@ -3,6 +3,7 @@ import UrlForm from "./UrlForm";
 import UrlTable from "./UrlTable";
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import CategoryPage from "./CategoryPage";
+import Home from "./Home";
 
 function App() {
   return (
@@ -12,13 +13,7 @@ function App() {
         <Route
           path="/"
           element={
-            <main>
-              <Link to="/category">
-                <button>Manage Categories</button>
-              </Link>
-              <UrlForm />
-              <UrlTable />
-            </main>
+            <Home />
           }
         />
         <Route path="category" element={<CategoryPage />} />
